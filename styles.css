@@ -1,0 +1,241 @@
+/* Full Page Background */
+body {
+    font-family: 'Courier New', monospace;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #111; /* Solid color background */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Hide elements initially */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s, visibility 1s;
+}
+
+/* Show elements */
+.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s, visibility 1s;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.welcome-message {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0f0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+#photo {
+    width: 25%;
+    margin-right: 20px;
+    position: relative;
+}
+
+#photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #0f0;
+}
+
+#resume-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#resume-button {
+    background-color: transparent;
+    color: #0f0;
+    border: 2px solid #0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#resume-button:hover {
+    background-color: #0f0;
+    color: #000;
+}
+
+.intro-text {
+    width: 75%;
+    font-size: 24px;
+    position: relative;
+    padding: 20px;
+    border: 2px solid #0f0;
+    border-radius: 10px;
+    background-color: #222;
+    box-sizing: border-box;
+    color: #fff;
+    overflow: hidden;
+}
+
+.shell-box {
+    width: 75%;
+    font-size: 24px;
+    position: relative;
+    padding: 20px;
+    border: 2px solid #0f0;
+    border-radius: 10px;
+    background-color: #222;
+    box-sizing: border-box;
+    color: #fff;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.typing {
+    white-space: pre-wrap;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.typing .command {
+    color: #0f0; /* Green for root commands */
+}
+
+.typing .text {
+    color: #fff; /* White for text details */
+}
+
+#menu-bar {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    margin: 0px 0;
+    width: 100%;
+    background-color: #181616;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-link {
+    color: #0f0;
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    padding: 10px 10px;
+    border-radius: 2px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #0f0;
+    color: #000000;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Spacing between logos */
+    margin-top: 120px;
+    position: relative; /* Change from fixed to relative */
+    bottom: 20px; /* Adjust as needed */
+    left: 10%;
+    transform: translateX(-50%); /* Center align */
+}
+
+.social-link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.social-link img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.social-link img:hover {
+    transform: scale(1.1);
+}
+::-webkit-scrollbar {
+    width: 4px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #000000; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00FF00; /* Thumb color */
+    border-radius: 2px; /* Rounded corners for thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00CC00; /* Darker green on hover */
+}
+.welcome-message.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+#mobile-warning {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #222;
+    color: #f00;
+    border: 2px solid #f00;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    z-index: 1000;
+    transition: opacity 1s, visibility 1s;
+    visibility: hidden;
+}
+
+#mobile-warning.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+#mobile-warning.hidden {
+    visibility: hidden;
+    opacity: 0;
+}

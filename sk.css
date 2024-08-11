@@ -1,0 +1,325 @@
+/* General styles */
+body {
+    background-color: #181818;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+/* Menu Bar */
+#menu-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background-color: #181616;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-link {
+    color: #0f0;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 2px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #0f0;
+    color: #000;
+}
+
+/* Shell Box */
+.shell-box {
+    margin-top: 60px;
+    padding: 15px;
+    background-color: #202020;
+    border-radius: 5px;
+    max-width: 900px;
+    margin: 60px auto 20px;
+    font-size: 20px;
+    color: #0f0;
+}
+
+/* Loading and ASCII Art */
+.loading-text {
+    font-family: 'Courier New', monospace;
+    color: #0f0;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.ascii-art {
+    font-family: 'Courier New', monospace;
+    color: #0f0;
+    font-size: 14px;
+    text-align: center;
+    white-space: pre;
+    margin: 20px 0;
+    margin-left: -100px; /* Adjust this value to move it left */
+    position: relative; /* Add this */
+}
+
+
+/* Skills Container */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 900px;
+    background-color: #202020;
+    border-radius: 10px;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.skills-container.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.skills-section {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid #0f0;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills-section.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.skills-section.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.skills-section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0f0;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.skill-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.skill-meter {
+    flex-grow: 1;
+    background-color: #333;
+    border-radius: 5px;
+    height: 9px;
+    position: relative;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #0f0;
+    border-radius: 5px;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/* Logos in skills sections */
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.tool-logo, .tech-logo, .data-logo {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+
+/* Custom Scrollbar */
+body::-webkit-scrollbar {
+    width: 4px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #0f0;
+    border-radius: 2px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #202020;
+    border-radius: 5px;
+}
+/* ASCII Art */
+.ascii-art {
+    font-family: 'Courier New', monospace;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    text-align: center;
+    white-space: pre; /* Preserve formatting */
+    margin: 20px 0;
+    /* Ensure it is always visible */
+    opacity: 1;
+    transform: scale(1);
+}
+/* General styles for tooltips */
+.logo-tooltip {
+    display: none;
+    position: absolute;
+    bottom: 100%; /* Position above the logo */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(0, 0, 0);
+    color: #0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+/* Hover effect for logos */
+.tool-logo, .tech-logo, .data-logo {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Position tooltips relative to logos */
+}
+
+/* Scale logo on hover and show tooltip */
+.tool-logo:hover,
+.tech-logo:hover,
+.data-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
+}
+
+/* Show tooltip on hover */
+.logo-item:hover .logo-tooltip {
+    display: block;
+}
+.back-button {
+    position: fixed;
+    top: 100px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: transparent; /* Transparent background */
+    color: #00FF00; /* Green font color */
+    text-decoration: none;
+    border: 2px solid #00FF00; /* Green border */
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px; /* Smaller font size */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.back-button:hover {
+    background-color: #00FF00; /* Green background on hover */
+    color: #000; /* Black text color on hover */
+}
+/* Programming Section Logo Item */
+.skill-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Programming Logos */
+.skill-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* For tooltip positioning */
+}
+
+/* Tooltip for Programming Logos */
+.logo-tooltip {
+    display: none;
+    position: absolute;
+    bottom: 100%; /* Position above the logo */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 10;
+    margin-bottom: 5px; /* Add some space between tooltip and logo */
+}
+
+/* Hover Effect for Programming Logos */
+.skill-item:hover .skill-logo {
+    transform: scale(1.1); /* Enlarge logo on hover */
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5); /* Glow effect */
+}
+
+/* Show Tooltip on Hover */
+.skill-item:hover .logo-tooltip {
+    display: block;
+}
+
+/* Hover Effect for Skill Meters */
+.skill-meter {
+    flex-grow: 1;
+    background-color: #000000;
+    border-radius: 5px;
+    height: 9px;
+    position: relative;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Skill Level */
+.skill-level {
+    height: 100%;
+    background-color: #0f0;
+    border-radius: 5px;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/* Show Skill Level Width on Hover */
+.skill-item:hover .skill-meter {
+    background-color: #444; /* Darker background on hover */
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5); /* Glow effect */
+}
+
+/* Show Skill Level Width on Hover */
+.skill-item:hover .skill-level {
+    width: 100%; /* Show full skill level on hover */
+}

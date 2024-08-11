@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Vinay Menon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+New&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ex.css">
+    <style>
+        /* Adjust font size and spacing for better readability */
+.shell-box {
+    margin-top: 60px;
+    font-size: 16px; /* Smaller font size */
+    padding: 20px; /* Reduced padding */
+}
+
+.typing {
+    font-size: 18px; /* Smaller typing text */
+}
+
+.logo-detail {
+    padding: 10px; /* Reduced padding */
+    max-width: 800px; /* Adjusted max-width */
+}
+
+.logo {
+    width: 100px; /* Smaller logo size */
+    height: 100px; /* Smaller logo size */
+}
+
+.details {
+    font-size: 18px; /* Larger font size for details */
+}
+
+.details h2 {
+    font-size: 20px; /* Larger font size for job titles */
+}
+
+.details p {
+    font-size: 16px; /* Adjust font size for paragraphs */
+    margin: 0; /* Remove default margins */
+    line-height: 1.5; /* Improved line spacing */
+}
+
+.details ul {
+    padding-left: 20px; /* Indentation for list items */
+}
+
+.details li {
+    font-size: 16px; /* Font size for list items */
+    margin-bottom: 5px; /* Space between items */
+    position: relative; /* Position for bullet */
+}
+
+.details li::before {
+    content: "•"; /* Dot before each list item */
+    color: #333; /* Color of the dot */
+    position: absolute; /* Absolute positioning */
+    left: -15px; /* Position dot to the left */
+    top: 0; /* Align dot vertically */
+    font-size: 20px; /* Size of the dot */
+}
+
+.bold-text {
+    font-weight: bold; /* Bold text */
+    font-size: 18px; /* Font size for bold text */
+}
+
+.badges {
+    display: flex;
+    gap: 25px; /* Reduced gap */
+    margin-top: 10px; /* Reduced margin-top */
+    position: relative; /* Ensure tooltip positioning is relative to badges container */
+}
+
+.badge {
+    width: 50px; /* Smaller badge size */
+    height: 50px; /* Smaller badge size */
+    position: relative; /* For tooltip positioning */
+}
+
+.badge-image {
+    width: 110%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 120%; /* Position above the badge */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 3px 6px; /* Reduced padding */
+    border-radius: 4px; /* Smaller border-radius */
+    font-size: 12px; /* Smaller font size for tooltip */
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+}
+
+.badge:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <a href="eindex.html" class="back-button">cd /</a>
+        <div class="welcome-message">
+            <div class="shell-box">
+                <p id="welcome-text" class="typing"></p>
+                <p id="loading-text" class="loading-text"><span class="loading-dots">Loading</span></p>
+                <pre id="ascii-art" class="ascii-art hidden">
+                    /$$$$$$$$                                         /$$                                        
+                    | $$_____/                                        |__/                                        
+                    | $$       /$$   /$$  /$$$$$$   /$$$$$$   /$$$$$$  /$$  /$$$$$$  /$$$$$$$   /$$$$$$$  /$$$$$$ 
+                    | $$$$$   |  $$ /$$/ /$$__  $$ /$$__  $$ /$$__  $$| $$ /$$__  $$| $$__  $$ /$$_____/ /$$__  $$
+                    | $$__/    \  $$$$/ | $$  \ $$| $$$$$$$$| $$  \__/| $$| $$$$$$$$| $$  \ $$| $$      | $$$$$$$$
+                    | $$        >$$  $$ | $$  | $$| $$_____/| $$      | $$| $$_____/| $$  | $$| $$      | $$_____/
+                    | $$$$$$$$ /$$/\  $$| $$$$$$$/|  $$$$$$$| $$      | $$|  $$$$$$$| $$  | $$|  $$$$$$$|  $$$$$$$
+                    |________/|__/  \__/| $$____/  \_______/|__/      |__/ \_______/|__/  |__/ \_______/ \_______/
+                                        | $$                                                                      
+                                        | $$                                                                      
+                                        |__/                                                                                       
+                </pre>
+                <div id="logo-details" class="logo-details hidden">
+                    <div class="logo-detail">
+                        <a href="https://www.bankofamerica.com" target="_blank">
+                            <img src="ba.png" alt="Bank Of America Logo" class="logo">
+                        </a>
+                        <div class="details">
+                            <h2>Bank Of America</h2>
+                            <p class="bold-text">Senior Tech Associate</p>
+                            <p class="bold-text">March 2022 - July 2023</p>
+                            <ul>
+                                <li>Utilized Django and Flask frameworks to develop Python applications, focusing on optimizing processing times and improving overall efficiency.</li>
+                                <li>Addressed and resolved numerous software incident tickets through thorough debugging and integration testing, enhancing code quality and reliability.</li>
+                                <li>Mentored interns in developing Java automation scripts using Selenium to streamline testing processes.</li>
+                            </ul>
+                            <div class="badges">
+                                <div class="badge">
+                                    <img src="Python.svg" alt="Python Badge" class="badge-image">
+                                    <div class="tooltip">Python</div>
+                                </div>
+                                <div class="badge">
+                                    <img src="java.png" alt="Java Badge" class="badge-image">
+                                    <div class="tooltip">Java</div>
+                                </div>
+                                <div class="badge">
+                                    <img src="sql.jpg" alt="SQL Badge" class="badge-image">
+                                    <div class="tooltip">SQL</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-detail">
+                        <a href="https://www.wipro.com" target="_blank">
+                            <img src="wf.png" alt="Wipro LTD Logo" class="logo">
+                        </a>
+                        <div class="details">
+                            <h2>Wipro LTD</h2>
+                            <p class="bold-text">Project Engineer</p>
+                            <p class="bold-text">June 2021 - March 2022</p>
+                            <ul>
+                                <li>Employed Splunk for real-time security incident response, significantly enhancing the ability to detect and resolve security issues efficiently.</li>
+                                <li>Integrated Splunk for log analysis to improve IT issue resolution and generated security reports to facilitate informed decision-making and policy enforcement.</li>
+                                <li>Managed employee PC security permissions using tools like UAC, SharePoint Security and organized cybersecurity awareness training sessions to bolster organizational security posture.</li>
+                            </ul>
+                            <div class="badges">
+                                <div class="badge">
+                                    <img src="wsk.png" alt="WSK Badge" class="badge-image">
+                                    <div class="tooltip">Wireshark</div>
+                                </div>
+                                <div class="badge">
+                                    <img src="spl.png" alt="Splunk Badge" class="badge-image">
+                                    <div class="tooltip">Splunk</div>
+                                </div>
+                                <div class="badge">
+                                    <img src="gp.png" alt="GP Badge" class="badge-image">
+                                    <div class="tooltip">GoPhish</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-detail">
+                        <a href="https://www.mindgate.solutions/" target="_blank">
+                            <img src="mg.jpeg" alt="Mindgate Solutions Logo" class="logo">
+                        </a>
+                        <div class="details">
+                            <h2>Mindgate Solutions</h2>
+                            <p class="bold-text">Web Development Intern</p>
+                            <p class="bold-text">June 2019</p>
+                            <ul>
+                                <li>Worked on enhancing the functionality of online payment applications, implementing features to ensure secure and efficient transactions.</li>
+                                <li>Utilized web development technologies (e.g., HTML, CSS, JavaScript) and backend technologies (e.g., PHP) to contribute to robust payment solutions.</li>
+                            </ul>
+                            <div class="badges">
+                                <div class="badge">
+                                    <img src="JS.svg" alt="JavaScript Badge" class="badge-image">
+                                    <div class="tooltip">JavaScript</div>
+                                </div>
+                                <div class="badge">
+                                    <img src="react.svg" alt="PHP Badge" class="badge-image">
+                                    <div class="tooltip">React</div>
+                                </div>
+                                <div class="badge">
+                                    <img src="css.png" alt="CSS Badge" class="badge-image">
+                                    <div class="tooltip">CSS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="menu-bar">
+        <a href="ed.html" class="nav-link">Education</a>
+        <a href="ex.html" class="nav-link">Experience</a>
+        <a href="pj.html" class="nav-link">Projects</a>
+        <a href="sk.html" class="nav-link">Skills</a>
+    </nav>
+    
+    <script src="ex.js"></script>
+</body>
+</html>

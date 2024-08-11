@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Vinay Menon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+New&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pj.css">
+    <style>
+    
+
+        /* Back Button Styling */
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 10px;
+            padding: 10px 20px;
+            background-color: transparent; /* Transparent background */
+            color: #00FF00; /* Green font color */
+            text-decoration: none;
+            border: 2px solid #00FF00; /* Green border */
+            border-radius: 5px;
+            font-size: 12px; /* Smaller font size */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+        }
+
+        .back-button:hover {
+            background-color: #00FF00; /* Green background on hover */
+            color: #000; /* Black text color on hover */
+        }
+
+      
+        
+
+        .ascii-art {
+            white-space: pre-wrap;
+            text-align: center;
+        }
+
+        /* Projects Container */
+        .projects-container {
+            padding: 80px 20px;
+        }
+
+        /* Team Sections */
+        .team-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            padding-bottom: 10px;
+        }
+
+        .project-box {
+            margin: 20px 0;
+            padding: 20px;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid #00FF00;
+            border-radius: 5px;
+            color: #00FF00;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .project-info {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .project-link {
+            color: #00FF00;
+            text-decoration: none;
+            border-bottom: 1px  #00FF00;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Hover Effect for Team Sections */
+        .red-team:hover {
+            border: 2px solid red;
+        }
+
+        .blue-team:hover {
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="eindex.html" class="back-button">cd /</a>
+        <!-- Menu Bar -->
+        <nav id="menu-bar">
+            <a href="ed.html" class="nav-link">Education</a>
+            <a href="ex.html" class="nav-link">Experience</a>
+            <a href="pj.html" class="nav-link">Projects</a>
+            <a href="sk.html" class="nav-link">Skills</a>
+        </nav>
+        <div class="shell-box">
+            <p class="typing">root@vinay-kali:~# cd Projects</p>
+        </div>
+        <div class="loading-text hidden">Loading...</div>
+        <div class="ascii-art hidden">
+            /$$$$$$$  /$$$$$$$   /$$$$$$     /$$$$$ /$$$$$$$$  /$$$$$$  /$$$$$$$$ /$$$$$$ <br>
+            | $$__  $$| $$__  $$ /$$__  $$   |__  $$| $$_____/ /$$__  $$|__  $$__//$$__  $$<br>
+            | $$  \ $$| $$  \ $$| $$  \ $$      | $$| $$      | $$  \__/   | $$  | $$  \__/<br>
+            | $$$$$$$/| $$$$$$$/| $$  | $$      | $$| $$$$$   | $$         | $$  |  $$$$$$ <br>
+            | $$____/ | $$__  $$| $$  | $$ /$$  | $$| $$__/   | $$         | $$   \____  $$<br>
+            | $$      | $$  \ $$| $$  | $$| $$  | $$| $$      | $$    $$   | $$   /$$  \ $$<br>
+            | $$      | $$  | $$|  $$$$$$/|  $$$$$$/| $$$$$$$$|  $$$$$$/   | $$  |  $$$$$$/<br>
+            |__/      |__/  |__/ \______/  \______/ |________/ \______/    |__/   \______/ <br>
+        </div>
+    </header>
+
+    <div class="projects-container">
+        <!-- Red Team Section -->
+        <div class="team-section red-team">
+            <h2 class="section-title">Red Team</h2>
+            <div class="project-box" style="background-image: url('Malware.jpg');">
+                <div class="project-info">
+                    <h3>Remote Access Tool</h3>
+                    <p>C&C function used to hack remotely</p>
+                    <a href="https://github.com/vimenon99/RAT" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-box" style="background-image: url('worm.jpg');">
+                <div class="project-info">
+                    <h3>Morris Worm</h3>
+                    <p>Preventing self-Duplication of an Internet bug</p>
+                    <a href="https://github.com/vimenon99/SEEDLABS-MORRIS-WORM" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-box" style="background-image: url('ps.jpg');">
+                <div class="project-info">
+                    <h3>Python3 Port Scanner</h3>
+                    <p>Simple port scanner with service version detection</p>
+                    <a href="https://github.com/vimenon99/Port-Scanner-using-Python" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blue Team Section -->
+        <div class="team-section blue-team">
+            <h2 class="section-title">Blue Team</h2>
+            <div class="project-box" style="background-image: url('vpn.jpg');">
+                <div class="project-info">
+                    <h3>Virtual Private Network</h3>
+                    <p>Implementing mini-VPN from scratch</p>
+                    <a href="https://github.com/vimenon99/Virtual-Private-Network" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-box" style="background-image: url('fw.jpeg');">
+                <div class="project-info">
+                    <h3>Firewall</h3>
+                    <p>Implementing Firewall for Linux</p>
+                    <a href="https://github.com/vimenon99/Firewall-UFW" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-box" style="background-image: url('svm.jpg');">
+                <div class="project-info">
+                    <h3>Defense against Data Poisoning on SVM Models</h3>
+                    <p>Research for defense strategies against data corruption in Support Vector Machines</p>
+                    <a href="https://github.com/vimenon99/SVM-Data-Poisoning-and-Defense" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-box" style="background-image: url('de.jpeg');">
+                <div class="project-info">
+                    <h3>Data Encryption for Medical Images</h3>
+                    <p>Using combination of cryptography and steganography for health data integrity</p>
+                    <a href="https://github.com/vimenon99/Data-Encryption-for-Medical-Images" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="pj.js"></script>
+</body>
+</html>
